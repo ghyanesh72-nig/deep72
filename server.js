@@ -18,7 +18,7 @@ let adminCollection;
 
 // Middleware
 app.use(cors({
-  origin: 'https://sites-qf7t94rca-ghyaneshs-projects.vercel.app',  // Only allow requests from the Vercel domain
+  origin: 'https://sites-8sp6.vercel.app',  // Only allow requests from the Vercel domain
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify the allowed HTTP methods (optional)
   allowedHeaders: ['Content-Type', 'Authorization'] // Specify the allowed headers (optional)
 }));
