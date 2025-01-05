@@ -18,7 +18,7 @@ let adminCollection;
 
 // Middleware
 app.use(cors({
-  origin: 'https://superb-buttercream-6164d2.netlify.app',  // Only allow requests from the Netlify domain
+  origin: 'https://luminous-dasik-8a1a29.netlify.app',  // Only allow requests from the Netlify domain
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify the allowed HTTP methods (optional)
   allowedHeaders: ['Content-Type', 'Authorization'] // Specify the allowed headers (optional)
 }));
