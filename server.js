@@ -18,11 +18,15 @@ let adminCollection;
 
 // Middleware
 app.use(cors({
-  origin: 'sites-gnjklclvt-ghyaneshs-projects.vercel.app',  // Only allow requests from the Netlify domain
+  origin: 'https://sites-qf7t94rca-ghyaneshs-projects.vercel.app',  // Only allow requests from the Vercel domain
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify the allowed HTTP methods (optional)
   allowedHeaders: ['Content-Type', 'Authorization'] // Specify the allowed headers (optional)
 }));
 
+// Allow preflight OPTIONS requests for all routes (important for CORS)
+app.options('*', cors());
+
+// Body parser middleware
 app.use(bodyParser.json());
 
 // Mongo connection
@@ -39,7 +43,7 @@ const connectMongoDB = async () => {
   }
 };
 
-// Routes (no changes needed here)
+// Routes
 app.post('/submit-form', async (req, res) => {
   const formData = req.body;
 
@@ -103,7 +107,7 @@ connectMongoDB().then(() => {
   });
 });
 
-// Admin login and other routes (no changes needed here)
+// Admin login and other routes
 app.post('/admin', async (req, res) => {
   const { email, password } = req.body;
 
